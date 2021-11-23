@@ -1,21 +1,20 @@
 {
-  "name": "your-bot-name",
+  "name": "discord-bot",
   "version": "1.0.0",
-  "description": "A very complete discord bot",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": ">=12"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imsuck/discord-bot.git"
   },
-  "author": "your-name",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@types/node": "^12.12.31",
-    "ascii-tables": "0.0.1",
-    "discord.js": "^12.0.2",
-    "fs": "0.0.1-security",
-    "ms": "^2.1.2"
-  }
+  "bugs": {
+    "url": "https://github.com/imsuck/discord-bot/issues"
+  },
+  "homepage": "https://github.com/imsuck/discord-bot#readme"
 }
