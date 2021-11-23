@@ -1,20 +1,4 @@
 {
-<<<<<<< Updated upstream
-  "name": "temp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "imsuck",
-  "license": "ISC",
-  "dependencies": {
-    "@discordjs/rest": "^0.1.0-canary.0",
-    "discord-api-types": "^0.24.0",
-    "discord.js": "^13.3.1"
-  }
-=======
   "name": "discord-bot",
   "version": "1.0.0",
   "description": "",
@@ -33,5 +17,4 @@
     "url": "https://github.com/imsuck/discord-bot/issues"
   },
   "homepage": "https://github.com/imsuck/discord-bot#readme"
->>>>>>> Stashed changes
 }
