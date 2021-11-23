@@ -1,16 +1,21 @@
 {
-  "name": "temp",
+  "name": "your-bot-name",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "A very complete discord bot",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
-  "author": "imsuck",
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "your-name",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/rest": "^0.1.0-canary.0",
-    "discord-api-types": "^0.24.0",
-    "discord.js": "^13.3.1"
+    "@types/node": "^12.12.31",
+    "ascii-tables": "0.0.1",
+    "discord.js": "^12.0.2",
+    "fs": "0.0.1-security",
+    "ms": "^2.1.2"
   }
 }
