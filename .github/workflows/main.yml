@@ -1,0 +1,30 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the workspace!
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: 17.x.x
+          architecture: x64
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Check if anything breaks
+        run: | 
+          set TOKEN=${{ secrets.TOKEN }}
+          npm run start
