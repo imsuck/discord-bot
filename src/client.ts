@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+let badWords = ["amogus", "forgor"];
+
 const client = new Client({
 	intents: [
 		Intents.FLAGS.GUILDS,
