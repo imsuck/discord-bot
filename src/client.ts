@@ -35,5 +35,15 @@ client.on("messageCreate", (msg) => {
 		msg.reply("pong! 🏓");
 	}
 });
+client.on("messageCreate", (msg) => {
+	let listLength = badWords.length;
+	for (var i = 0; i < listLength; i++) {
+		if (msg.content.includes(badWords[i])) {
+			msg.reply("Bad word :(");
+			msg.delete();
+			break;
+		}
+	}
+});
 
 client.login(process.env.TOKEN ?? "");
