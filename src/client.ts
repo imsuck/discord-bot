@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+let badWords = ["amogus", "forgor"];
+
 const client = new Client({
 	intents: [
 		Intents.FLAGS.GUILDS,
@@ -33,6 +35,21 @@ client.once("ready", async () => {
 client.on("messageCreate", (msg) => {
 	if (msg.content === "ping") {
 		msg.reply("pong! 🏓");
+	}
+});
+// delete bad words
+client.on("messageCreate", (msg) => {
+	const listLength = badWords.length;
+	const msgContent = msg.content.toLowerCase();
+
+	for (let i = 0; i < listLength; i++) {
+		if (msgContent.includes(badWords[i])) {
+			msg.reply("Bad word!");
+			setTimeout(() => {
+				msg.delete();
+			}, 250);
+			break;
+		}
 	}
 });
 
