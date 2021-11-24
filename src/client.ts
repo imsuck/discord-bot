@@ -1,6 +1,9 @@
 import "reflect-metadata";
 import { Intents, Interaction, Message } from "discord.js";
 import { Client } from "discordx";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const client = new Client({
 	intents: [
@@ -15,7 +18,7 @@ const client = new Client({
 });
 
 client.once("ready", async () => {
-	// init all applicaiton commands
+	// init all application commands
 	await client.initApplicationCommands({
 		guild: { log: true },
 		global: { log: true },
@@ -27,7 +30,7 @@ client.once("ready", async () => {
 	console.log("Bot started");
 });
 
-client.on("message", (msg) => {
+client.on("messageCreate", (msg) => {
 	if (msg.content === "ping") {
 		msg.reply("pong! 🏓");
 	}
