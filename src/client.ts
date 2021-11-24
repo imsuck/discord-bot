@@ -37,12 +37,17 @@ client.on("messageCreate", (msg) => {
 		msg.reply("pong! 🏓");
 	}
 });
+// delete bad words
 client.on("messageCreate", (msg) => {
-	let listLength = badWords.length;
-	for (var i = 0; i < listLength; i++) {
-		if (msg.content.includes(badWords[i])) {
-			msg.reply("Bad word :(");
-			msg.delete();
+	const listLength = badWords.length;
+	const msgContent = msg.content.toLowerCase();
+
+	for (let i = 0; i < listLength; i++) {
+		if (msgContent.includes(badWords[i])) {
+			msg.reply("Bad word!");
+			setTimeout(() => {
+				msg.delete();
+			}, 250);
 			break;
 		}
 	}
