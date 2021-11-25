@@ -39,11 +39,8 @@ client.on("messageCreate", (msg) => {
 });
 // delete bad words
 client.on("messageCreate", (msg) => {
-	const listLength = badWords.length;
-	const msgContent = msg.content.toLowerCase();
-
-	for (let i = 0; i < listLength; i++) {
-		if (msgContent.includes(badWords[i].toLowerCase())) {
+	for (let i = 0; i < badWords.length; i++) {
+		if (msg.content.includes(badWords[i])) {
 			msg.reply("Bad word!");
 			setTimeout(() => {
 				msg.delete();
