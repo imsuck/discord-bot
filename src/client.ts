@@ -2,11 +2,12 @@ import "reflect-metadata";
 import { Intents, Interaction, Message } from "discord.js";
 import { Client } from "discordx";
 import dotenv from "dotenv";
+import { messageCheck } from "./utils/messaging";
 
 dotenv.config();
 
-const badWords = ["amogus", "forgor", "wysi"];
-const exceptions = ["amoguse"];
+const badWords = ["dlscord", "cliscord"];
+const exceptions = ["nigeria"];
 
 const client = new Client({
 	intents: [
@@ -40,15 +41,11 @@ client.on("messageCreate", (msg) => {
 });
 // delete bad words
 client.on("messageCreate", (msg) => {
-	const message = msg.content.toLowerCase();
-	for (let i = 0; i < badWords.length; i++) {
-		if (message.includes(badWords[i]) && !message.includes(exceptions[0])) {
-			msg.reply("Bad word!");
-			setTimeout(() => {
-				msg.delete();
-			}, 250);
-			break;
-		}
+	if (messageCheck(msg.content, badWords, exceptions) === false) {
+		msg.reply("Bad word!");
+		setTimeout(() => {
+			msg.delete();
+		}, 250);
 	}
 });
 
