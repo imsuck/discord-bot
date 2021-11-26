@@ -5,7 +5,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-let badWords = ["amogus", "forgor", "wysi"];
+const badWords = ["amogus", "forgor", "wysi"];
+const exceptions = ["amoguse"];
 
 const client = new Client({
 	intents: [
@@ -39,8 +40,9 @@ client.on("messageCreate", (msg) => {
 });
 // delete bad words
 client.on("messageCreate", (msg) => {
+	const message = msg.content.toLowerCase();
 	for (let i = 0; i < badWords.length; i++) {
-		if (msg.content.toLowerCase().includes(badWords[i])) {
+		if (message.includes(badWords[i]) && !message.includes(exceptions[0])) {
 			msg.reply("Bad word!");
 			setTimeout(() => {
 				msg.delete();
