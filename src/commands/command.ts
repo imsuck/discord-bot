@@ -1,3 +1,4 @@
+import { Client } from "discord.js";
 import {
 	Discord,
 	SimpleCommand,
@@ -12,12 +13,9 @@ class command {
 		command.message.reply("pong! 🏓");
 	}
 	@SimpleCommand("say")
-	async say(
-		@SimpleCommandOption("message", { type: "STRING" }) message: string,
-		command: SimpleCommandMessage
-	) {
+	async say(command: SimpleCommandMessage) {
 		try {
-			await command.message.channel.send(message);
+			await command.message.channel.send(command.argString);
 		} catch (err) {
 			command.message.channel.send("Please enter a message.");
 		}

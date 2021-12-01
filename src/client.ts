@@ -40,7 +40,7 @@ async function start() {
 	});
 
 	client.on("messageCreate", (msg) => {
-		client.executeCommand(msg);
+		client.executeCommand(msg, { caseSensitive: true });
 
 		// delete bad words
 		if (messageCheck(msg.content, badWords, exceptions) === false) {
