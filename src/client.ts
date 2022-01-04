@@ -23,7 +23,6 @@ async function start() {
 			Intents.FLAGS.GUILD_VOICE_STATES,
 			Intents.FLAGS.DIRECT_MESSAGES,
 		],
-		silent: true,
 	});
 
 	client.once("ready", async () => {
