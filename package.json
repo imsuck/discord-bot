@@ -28,7 +28,7 @@
 		"@discordx/importer": "^1.1.2",
 		"discord.js": "^13.6.0",
 		"discordx": "^9.1.12",
-		"dotenv": "^14.2.0",
+		"dotenv": "^14.3.0",
 		"nodemon": "^2.0.15",
 		"reflect-metadata": "^0.1.13",
 		"ts-node": "^10.4.0"
