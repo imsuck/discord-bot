@@ -27,7 +27,7 @@
 	"dependencies": {
 		"@discordx/importer": "^1.1.2",
 		"discord.js": "^13.6.0",
-		"discordx": "^9.1.12",
+		"discordx": "^9.1.15",
 		"dotenv": "^16.0.0",
 		"nodemon": "^2.0.15",
 		"reflect-metadata": "^0.1.13",
