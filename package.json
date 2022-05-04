@@ -29,7 +29,7 @@
 		"discord.js": "^13.6.0",
 		"discordx": "^9.5.3",
 		"dotenv": "^16.0.0",
-		"nodemon": "^2.0.15",
+		"nodemon": "^2.0.16",
 		"reflect-metadata": "^0.1.13",
 		"ts-node": "^10.7.0"
 	},
